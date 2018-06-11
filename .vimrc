@@ -60,6 +60,7 @@ set nocompatible
   Plug 'tmhedberg/matchit'
   Plug 'scrooloose/nerdtree'
   Plug 'vim-scripts/AutoComplPop'
+  Plug 'vim-scripts/gtags.vim'
   Plug 'altercation/vim-colors-solarized'
   Plug 'sukima/xmledit', { 'for': 'xml' }
   Plug 'easymotion/vim-easymotion'
@@ -267,9 +268,11 @@ set nocompatible
 
 " incsearch.vim {
 
-  map /  <Plug>(incsearch-forward)
-  map ?  <Plug>(incsearch-backward)
-  map g/ <Plug>(incsearch-stay)
+  if exists('g:incsearch_cli_key_mappings')
+    map /  <Plug>(incsearch-forward)
+    map ?  <Plug>(incsearch-backward)
+    map g/ <Plug>(incsearch-stay)
+  endif
 
 " }
 
@@ -299,5 +302,12 @@ set nocompatible
 
   cnoreabbrev Arun AsyncRun
   cnoreabbrev Astop AsyncStop
+
+" }
+
+
+" gtags.vim {
+
+  let g:Gtags_Auto_Map = 1
 
 " }
