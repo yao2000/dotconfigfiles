@@ -1,3 +1,4 @@
+# Copy this file to ~/.cgdb/cgdbrc
 set arrowstyle=long
 set autosourcereload
 set syntax=c
